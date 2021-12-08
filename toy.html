@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- <link rel="stylesheet" href="shape/Untitled-1.svg"> -->
+  
+<body>
+  <div id="wrap">
+
+    <div class="roombox">
+      <h1>>Showroom</h1>
+    </div>
+    <div class="bestbox">
+      <h1 class="besth1">>Best</h1>
+    </div>
+    <div class="newbox">
+    </div>
+    <div class="mybox"></div>
+
+  <div class="mainpage">
+      <h1 class="logo"><a href="#">HONNY</a></h1>
+      <h1 class="title">Chooose the menu</h1>
+      <ul class="homemenu">
+        <li class="room list">
+          <a href="#">Room</a>
+          <object data="shape/room.svg" type=""></object>
+        </li>
+        <li class="best list">
+          <a href="#">Best</a>
+          <object data="shape/best.svg" type=""></object>
+        </li>
+        <li class="new1 list">
+          <a href="#">New</a>
+          <object data="shape/new.svg" type=""></object>
+        </li>
+        <li class="my list">
+          <a href="#">My</a>
+          <object data="shape/my.svg" type=""></object>
+        </li>
+      </ul>
+      <div class="round1">
+        <object data="shape/small.svg" type=""></object>
+      </div>
+      <div class="round2"></div>
+      <div class="round3"></div>
+      <div class="sqaure"></div>
+      <div class="line1">
+        <object data="shape/line.svg" type=""></object>
+      </div>
+      <div class="line2"></div>
+      <div class="triangle"></div>
+    </div>
+  <section class="showroom"></section>
+  <section class="section-best"></section>
+  <section class="section-new"></section>
+  <footer>
+    <nav class="footermenu">
+      <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+      <label class="menu-open-button" for="menu-open">
+        <span class="lines line-1"></span>
+        <span class="lines line-2"></span>
+        <span class="lines line-3"></span>
+      </label>
+
+      <a href="#" class="menu-item blue">
+        <!-- 3 -->
+      </a>
+      <a href="#" class="menu-item green">
+        <!-- 4 -->
+      </a>
+      <a href="#" class="menu-item red">
+        <!-- 5 -->
+      </a>
+      <a href="#" class="menu-item purple"></a>
+      <a href="#" class="menu-item orange">
+        <!-- 1 -->
+      </a>
+      <a href="#" class="menu-item lightblue">
+        <!-- 2 -->
+      </a>
+    </nav>
+  </footer>
+  </div>
+
+  <script>
+    const room = document.querySelector('.room');
+    const best = document.querySelector('.best');
+    const newOne = document.querySelector('.new');
+    const my = document.querySelector('.my');
+    const title = document.querySelector('.title');
+    const roombox = document.querySelector('.roombox');
+    const bestbox = document.querySelector('.bestbox');
+    const newbox = document.querySelector('.newbox');
+    const besthOne = document.querySelector('.besth1');
+
+    console.log('list');
+    console.log('room_a');
+
+
+    title.animate([
+        {
+          top:'0',
+          right:'0',
+          opacity:"0"
+        },{
+          top:"25%",
+          right:"10%",
+          opacity:"0.4"
+        }
+        ],{
+          duration:2500,
+          // fill:"forwards"
+        });
+
+// ---------------------------------------------------------------------
+    
+    room.addEventListener('click',function(){
+      roombox.style.opacity = '0.7';
+      // footermenu.style.opacity ='0';
+      room.style.opacity = '0';
+      title.style.opacity = '0';
+    });
+    roombox.addEventListener('click',function(){
+      roombox.style.opacity = '0';
+      // footermenu.style.opacity = '1';
+      room.style.opacity = '1';
+    });
+
+// ----------------------------------------------------------------------
+    
+    best.addEventListener('click',function(){
+      besthOne.style.opacity = '1';
+      bestbox.style.opacity = '0.2';
+      title.style.opacity = '0';
+        });
+        
+    bestbox.addEventListener('click',function(){
+      bestbox.style.opacity = '0';
+    });
+    
+// ----------------------------------------------------------------------
+
+    newOne.addEventListener('click',function(){
+      newbox.style.opacity = '0.7';
+      title.style.opacity = '0';
+    });
+    newbox.addEventListener('click',function(){
+      newbox.style.opacity = '0';
+    })
+
+    // console.log('newbox');
+// ----------------------------------------------------------------------
+
+// ----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
